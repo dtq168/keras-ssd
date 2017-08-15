@@ -6,7 +6,7 @@ class XML_preprocessor(object):
 
     def __init__(self, data_path):
         self.path_prefix = data_path
-        self.num_classes = 20
+        self.num_classes = 3
         self.data = dict()
         self._preprocess_XML()
 
