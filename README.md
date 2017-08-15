@@ -25,4 +25,4 @@ pickle.dump(data,open('<FILE_NAME>.pkl', 'wb'))
 
 - Change `NUM_CLASSES` to be actual number of classes + 1 auxiliary background class. (refer [this](https://github.com/rykov8/ssd_keras/issues/17) discussion)
 
-
+- Make sure batch size is small enough otherwise infinite loop will be happen for data generation
