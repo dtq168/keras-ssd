@@ -6,7 +6,7 @@ class XML_preprocessor(object):
 
     def __init__(self, data_path):
         self.path_prefix = data_path
-        self.num_classes = 3
+        self.num_classes = 2
         self.data = dict()
         self._preprocess_XML()
 
@@ -89,6 +89,10 @@ import pickle
 data = XML_preprocessor('VOCPedestrian/Annotations/').data
 pickle.dump(data,open('VOCPedestrian.pkl','wb'))
 
+
+f = open('VOCPedestrian.pkl', 'rb')
+data = pickle.load(f)
+print(data.keys())
 
 # import pickle
 # data = XML_preprocessor('VOC2007/Annotations/').data
