@@ -94,3 +94,8 @@ ENV/
 .ropeproject
 
 .idea/
+VOCPedestrian
+VOCdevkit
+VOCdevkit*
+VOCtrainval_11-May-2012*
+VOCPedestrian*

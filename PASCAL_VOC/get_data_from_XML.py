@@ -39,11 +39,11 @@ class XML_preprocessor(object):
 
     def _to_one_hot(self,name):
         one_hot_vector = [0] * self.num_classes
-        if name == 'aeroplane':
+        if name == 'man':
             one_hot_vector[0] = 1
-        elif name == 'bicycle':
+        elif name == 'woman':
             one_hot_vector[1] = 1
-        elif name == 'bird':
+        elif name == 'child':
             one_hot_vector[2] = 1
         elif name == 'boat':
             one_hot_vector[3] = 1
@@ -85,6 +85,11 @@ class XML_preprocessor(object):
         return one_hot_vector
 
 ## example on how to use it
+import pickle
+data = XML_preprocessor('VOCPedestrian/Annotations/').data
+pickle.dump(data,open('VOCPedestrian.pkl','wb'))
+
+
 # import pickle
 # data = XML_preprocessor('VOC2007/Annotations/').data
 # pickle.dump(data,open('VOC2007.p','wb'))
